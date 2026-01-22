@@ -1,0 +1,9 @@
+# backend/requirements.txt (محدث)
+Django==4.2.6
+djangorestframework==3.14.0
+django-cors-headers==4.2.0
+python-dotenv==1.0.0
+requests==2.31.0
+geopy==2.4.0
+pytz==2023.3
+drf-spectacular==0.26.5  # بديل أفضل
