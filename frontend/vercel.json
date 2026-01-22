@@ -1,0 +1,18 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm start",
+  "installCommand": "npm install",
+  "outputDirectory": "build",
+  "framework": "create-react-app",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://ameenalsharafi.pythonanywhere.com/api/$1"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://ameenalsharafi.pythonanywhere.com/api",
+    "REACT_APP_ENABLE_MAPS": "true",
+    "REACT_APP_ENABLE_CHARTS": "true"
+  }
+}
