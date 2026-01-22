@@ -10,7 +10,7 @@ import {
   Legend,
 } from 'chart.js';
 import './EldLogs.css';
-import * as XLSX from 'xlsx';
+//import  XLSX from 'xlsx';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
@@ -148,7 +148,7 @@ const EldLogs = ({ logs }) => {
 
   const exportToExcel = () => {
     // إنشاء مصنف Excel
-    const wb = XLSX.utils.book_new();
+   // const wb = XLSX.utils.book_new();
     
     // ورقة الملخص
     const summaryData = [
@@ -171,8 +171,8 @@ const EldLogs = ({ logs }) => {
       ]);
     });
 
-    const wsSummary = XLSX.utils.aoa_to_sheet(summaryData);
-    XLSX.utils.book_append_sheet(wb, wsSummary, 'Summary');
+  //  const wsSummary = XLSX.utils.aoa_to_sheet(summaryData);
+  //  XLSX.utils.book_append_sheet(wb, wsSummary, 'Summary');
 
     // ورقة لكل يوم
     logs.forEach((log, index) => {
@@ -208,12 +208,12 @@ const EldLogs = ({ logs }) => {
         });
       }
 
-      const wsDay = XLSX.utils.aoa_to_sheet(dayData);
-      XLSX.utils.book_append_sheet(wb, wsDay, `Day_${log.day_number}`);
+     // const wsDay = XLSX.utils.aoa_to_sheet(dayData);
+     // XLSX.utils.book_append_sheet(wb, wsDay, `Day_${log.day_number}`);
     });
 
     // حفظ الملف
-    XLSX.writeFile(wb, `ELD_Logs_${new Date().toISOString().split('T')[0]}.xlsx`);
+   // XLSX.writeFile(wb, `ELD_Logs_${new Date().toISOString().split('T')[0]}.xlsx`);
   };
 
   const printLogs = () => {
