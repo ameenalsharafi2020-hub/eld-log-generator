@@ -11,8 +11,8 @@ import {
 } from 'chart.js';
 import './EldLogs.css';
 //import  XLSX from 'xlsx';
-import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+//import jsPDF from 'jspdf';
+//import 'jspdf-autotable';
 
 ChartJS.register(
   CategoryScale,
@@ -58,7 +58,7 @@ const EldLogs = ({ logs }) => {
   };
 
   // وظائف التصدير
-  const exportToPDF = () => {
+/*  const exportToPDF = () => {
     const doc = new jsPDF();
     let yPos = 10;
 
@@ -145,7 +145,7 @@ const EldLogs = ({ logs }) => {
     // حفظ الملف
     doc.save(`ELD_Report_${new Date().toISOString().split('T')[0]}.pdf`);
   };
-
+*/
   const exportToExcel = () => {
     // إنشاء مصنف Excel
    // const wb = XLSX.utils.book_new();
